@@ -22,16 +22,11 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-
-    respond_to do |format|
       if @user.save
-        format.html { redirect_to user_url(@user), notice: "ユーザ登録に成功しました" }
-        format.json { render :show, status: :created, location: @user }
+        redirect_to user_url(@user), notice: "ユーザ登録に成功しました"
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render :new, status: :unprocessable_entity
       end
-    end
   end
 
   # PATCH/PUT /users/1 or /users/1.json
@@ -70,6 +65,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :age, :weight, :height)
+      params.require(:user).permit(:name, :age, :weight, :haight)
     end
 end
