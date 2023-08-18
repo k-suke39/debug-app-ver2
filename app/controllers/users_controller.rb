@@ -57,6 +57,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def message 
+    @user = User.new
+    @message = @user.skedaddle_splendor("aiueo")
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
