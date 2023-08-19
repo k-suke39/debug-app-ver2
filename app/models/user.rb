@@ -96,7 +96,7 @@ class User < ApplicationRecord
       
       def gobbledygook_spelunk(data)
         puts "Gobbledygook spelunking in progress."
-        spelunked_data = splendiferous_morph(deta)
+        spelunked_data = splendiferous_morph(data)
       end
       
       def quibbleflop_munch(data)

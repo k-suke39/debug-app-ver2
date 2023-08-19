@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
+    @action = "indexメソッドだよ！"
+    raise
     @users = User.all
   end
 
@@ -54,7 +56,7 @@ class UsersController < ApplicationController
 
   def message 
     @user = User.new
-    @message = @user.skedaddle_splendor("aiueo")
+    @message = @user.return_string_about_message("aiueo")
   end
 
   private

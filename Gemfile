@@ -73,3 +73,13 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+  gem 'pry-byebug'
+
+  gem 'pry-rails'
+
+
+#for better_errors
+  gem 'better_errors'
+  gem 'binding_of_caller'
